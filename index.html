@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Webpack App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .topBox {
+            margin-top: 15px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .topBox .item {
+            display: inline-block;
+        }
+
+        .topBox .item input {
+            width: 80px;
+        }
+
+        .reviewImage {
+            position: absolute;
+            right: 0;
+            top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topBox">
+        <div class="item">
+            <span>开始值</span>
+            <input id="startValue">
+        </div>
+        <div class="item">
+            <span>结束值</span>
+            <input id="endValue">
+        </div>
+        <div class="item">
+            <span>次数</span>
+            <input id="number">
+        </div>
+        <div class="item">
+            <span>函数</span>
+            <select id="function">
+
+            </select>
+        </div>
+        <button id="startBtn">开始</button>
+        <button id="funcSee">函数查看</button>
+    </div>
+    <div id="result">
+
+    </div>
+</body>
+
+</html>
