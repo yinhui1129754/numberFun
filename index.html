@@ -20,6 +20,10 @@
             display: inline-block;
         }
 
+        .topBox2 .item {
+            display: inline-block;
+        }
+
         .topBox .item input {
             width: 80px;
         }
@@ -29,35 +33,76 @@
             right: 0;
             top: 50px;
         }
+
+        .function1,
+        .function2 {
+            padding: 15px;
+        }
+
+        .inputArea {
+            max-width: 50%;
+        }
+
+        .inputArea textarea {
+            resize: none;
+            width: 100%;
+            height: 250px;
+        }
     </style>
 </head>
 
 <body>
     <div class="topBox">
         <div class="item">
-            <span>开始值</span>
-            <input id="startValue">
+            <button id="numberFun">函数值计算</button>
         </div>
         <div class="item">
-            <span>结束值</span>
-            <input id="endValue">
+            <button id="numberObj">对象值处理</button>
         </div>
-        <div class="item">
-            <span>次数</span>
-            <input id="number">
-        </div>
-        <div class="item">
-            <span>函数</span>
-            <select id="function">
-
-            </select>
-        </div>
-        <button id="startBtn">开始</button>
         <button id="funcSee">函数查看</button>
     </div>
-    <div id="result">
+    <div id="function1" class="function1">
+        <div class="topBox2">
+            <div class="item">
+                <span>开始值</span>
+                <input id="startValue">
+            </div>
+            <div class="item">
+                <span>结束值</span>
+                <input id="endValue">
+            </div>
+            <div class="item">
+                <span>次数</span>
+                <input id="number">
+            </div>
+            <div class="item">
+                <span>函数</span>
+                <select id="function">
 
+                </select>
+            </div>
+            <button id="startBtn">开始</button>
+        </div>
+        <div id="result">
+
+        </div>
     </div>
+
+    <div id="function2" class="function2">
+        <div class="topBox2">
+            <button id="runScript">运行</button>
+        </div>
+        <div class="inputArea">
+            <textarea id="objJson"></textarea>
+        </div>
+        <div class="inputArea">
+            <textarea id="objScript"></textarea>
+        </div>
+        <div class="inputArea">
+            <textarea id="objResult"></textarea>
+        </div>
+    </div>
+
 </body>
 
 </html>
