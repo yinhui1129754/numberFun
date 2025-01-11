@@ -9,7 +9,7 @@ let objResult = document.getElementById(eles.objResult)
 
 
 
-
+var formatNumber = (v) => { return parseFloat(v.toFixed(2)); }
 runScript.addEventListener("click", () => {
     let scriptTxt = objScript.value || ""
     let json = {}
@@ -18,9 +18,11 @@ runScript.addEventListener("click", () => {
     } catch (e) {
         console.log(e)
     }
-    let func = new Function("json", "easing", scriptTxt)
+    let keysLen = Object.keys(json).length
 
-    let result = func(json, easing)
+    let func = new Function("json", "easing", "formatNumber", "keysLen", scriptTxt)
+
+    let result = func(json, easing, formatNumber, keysLen)
 
     if (result) {
         objResult.value = JSON.stringify(result, null, 2)
